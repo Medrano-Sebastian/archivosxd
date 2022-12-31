@@ -1,0 +1,316 @@
+---
+title: "MINERÍA DE PROCESOS PARA PYTHON (PM4PY): CERRAR LA BRECHA ENTRE LA CIENCIA DE DATOS Y LA DE PROCESOS"
+author: "Medrano Alania Sebastian Rodrigo, Pareja Cabezas Flavia Alessandra, Rojas Melgarejo Jairo, Villanueva Hidalgo Benjamin Samuel "
+date: "2022-10-21"
+output:
+  html_document:
+    toc: yes
+    toc_dept.h: 5
+    toc_float:
+      smooth_scroll: yes
+    number_sections: yes
+    theme: cosmo
+    css: bootstrap.minty.css
+    highlight: pygments
+    df_print: kable
+editor_options: 
+  markdown: 
+    wrap: 72
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introducción
+
+La minería de procesos fue el foco de atención tanto de la academia como
+de la industria, debido a que proporciona herramientas y técnicas para
+aumentar el conocimiento general de un proceso, mediante el analisis de
+los datos de eventos almacenados durante la ejecución del proceso. La
+mayoría de estas herramientas admiten el descubrimiento de modelos de
+procesos que describen con precisión el proceso en estudio, además,
+comprende la verificación de conformidad,es decir, verificar en qué
+medida un modelo de proceso dado describe con precisión los datos
+eventos y la mejora de procesos. El soporte de tales tipos de análisis
+de minería de procesos generalmente se limita a herramientas academicas
+de minería de procesos de código abierto como Prom Framework y Apromore.
+
+Ambos ponen gran énfasis a proporcionar una interfaz gráfica de usuario
+fácil de usar e ideal para usuarios no expertos, y además ayuda a que
+llegue a un público mas amplio, sin embargo, complica la usabilidad de
+las herramientas con el fin de la expirementación científica a gran
+escala
+
+Para concluir está brecha antes mencionada se propone el marco de
+Process Mining for Python (PM4Py). Con el fin de lograr los objetivos se
+usa el lenguaje de programación Python2, ya que es el más adecuado por
+sus caraterísticas. En particular, el mundo de la ciencia de datos,
+tanto para la ciencia de datos clásica (pandas, numpy, scipy...) como
+para la investigación de aprendizaje automático de vanguardia
+(tensorflow, keras...).
+
+Los principales puntos focales de la novedosa biblioteca PM4Py son:
+
+-   Reduciendo la barrera para el desarrollo algorítmico y la
+    personalización al realizar un análisis de minería de procesos en
+    comparación con las herramientas académicas existentes como ProM
+    [2], RapidProM [5] y Apromore [3].
+-   Permitir la fácil integración de algoritmos de minería de procesos
+    con algoritmos de otros campos de la ciencia de datos, implementados
+    en varios paquetes Python de última generación.
+-   Cree un ecosistema colaborativo que permita fácilmente a los
+    investigadores y profesionales compartir códigos y resultados
+    valiosos con el mundo de la minería de procesos
+-   Proporcionar apoyo al usuario preciso por medio de un rico cuerpo de
+    documentación sobre las técnicas de minería de procesos disponibles
+    en la biblioteca.
+-   Estabilidad algorítmica mediante pruebas rigurosas
+
+# Problema
+
+Las herramientas comerciales de minería de procesos brindan soporte
+limitado para implementar algoritmos personalizados. Además, a menudo
+solo se puede acceder a las herramientas de minería de procesos
+comerciales y de código abierto a través de una interfaz gráfica de
+usuario, lo que dificulta su uso en entornos experimentales a gran
+escala.
+
+# Alcance
+
+Process Mining for Python (PM4Py), es una bilbioteca que proporciona
+integración con bibliotecas de última generación(pandas, numpy, scipy y
+scikit-learn), siendo capaz de realizar tareas que en algún momento eran
+complicadas. Su implementación fue un gran salto en lo que respecta a la
+minería de datos, es decir, en el analisis de datos de eventos generados
+durante de procesos, experimentando asi una mejora en el soporte y
+acceso a las diversas herramientas de minería de procesos comerciales y
+de código abierto
+
+# Limitaciones
+
+El uso que se daba para el soporte de análisis de minería de procesos a
+través de herramientas académicas como ProM Framework y Apromore las
+cuales si proporcionaban una interfaz gráfica fácil de usar incluso para
+no expertos asi como lo indico "The prom framework: A new era in process
+mining tool support," el marco ProM cuenta con un entorno "conectable",
+el marco es flexible con respecto al formato de entrada y salida, y
+también es lo suficientemente abierto como para permitir la fácil
+reutilización del código durante la implementación de nuevas ideas de
+minería de procesos. Sin embargo, como tales no admitían algoritmos de
+minería de procesos personalizables ni se lograba una experimentación y
+análisis a gran escala.
+
+# Objetivos
+
+El principal es cerrar la brecha que hay entorno a la ciencia de
+procesos y la de datos por lo cual se presenta una herramienta que es
+una biblioteca de minería de procesos llamada Process Mining for Python
+(PM4Py) que cuenta con las características necesarias para cumplir dicho
+objetivo como por ejemplo que es fácilmente extensible, permite la
+personalización algorítmica y nos da la facilidad de realizar
+experimentos a gran escala.
+
+# Metodología
+
+Consta de realizar primero el descubrimiento de proceso y posteriormente
+la comprobación de conformidad. En el descubrimiento de proceso
+utilizaremos de ejemplo la Fig.2 el cual comienza cargando los métodos
+de fabrica necesarios(en este caso se hace uso de Alpha Miner), luego la
+importación de un registro XES(flujo de eventos extensible), haciendo
+uso de Alpha Miner se proporciona el objeto de registro y gracias a ello
+se obtiene la visualización a través de un método de fabrica dando así
+el resultado en una ventana posterior.
+
+![](images/WhatsApp%20Image%202022-10-21%20at%2010.28.49%20AM.jpeg)
+
+La comprobación de conformidad se trata de verificar la precisión en la
+que el modelo de proceso describe los datos del evento y la mejora del
+proceso, en este caso de la figura 3 es un código para aplicar
+alineaciones y mostrar el resultado. Los pasos a realizar primero es la
+carga de métodos de fabrica de alienaciones obteniendo asi las
+alineaciones entre un objeto de registro y un modelo de proceso, para
+cada traza alineada se muestra su resultado en pantalla(parte inferior
+de la Fig. 3).
+
+![](images/WhatsApp%20Image%202022-10-21%20at%2010.48.31%20AM.jpeg)
+
+# Resultados
+
+Se puede observar que una gran cantidad de usurios mostraron interes en
+el PM4Py , que comenzaron a investigar y adquirirlo tal ocmo se e
+mjuestra en la figuras:
+
+![](images/WhatsApp%20Image%202022-10-21%20at%2011.00.23%20PM.jpeg)
+
+![](images/WhatsApp%20Image%202022-10-21%20at%2011.01.29%20PM.jpeg)
+
+PM4Py 1.0 se lanzó el 21/12/2018 y fue utilizado por 200 estudiantes en
+el curso "Introducción a la ciencia de datos" impartido por el grupo de
+ciencia de procesos y datos en la Universidad RWTH de Aquisgrán. PM4Py
+ya ha apoyado dos proyectos académicos y están disponibles públicamente:
+
+• Uso de autómatas probabilísticos para verificar el cumplimiento.
+
+• Alineaciones de prefijos para transmisión de datos de eventos
+
+PM4Py 1.1 se lanzó el 22/02/2019 con funciones adicionales. Hay algunas
+integraciones de la biblioteca PM4Py en otros proyectos:
+
+• La biblioteca de minería de procesos bupaR R usa PM4Py para manejar
+alineaciones y obtener modelos usando Inductive Miner. • Se escribió una
+interfaz web de análisis de datos en Vue.JS
+
+# Aplicaciones
+
+## Aplicación 1: Construcción eficiente de gráficos de comportamiento para datos de eventos inciertos
+
+-   Descubrimiento de procesos: Alpha(+) Miner [10] e Inductivo Miner
+    (IMDF [11]).
+
+-   Comprobación de conformidad: alineaciones y reproducción basadas en
+    tokens [12].
+
+-   Medida de la aptitud, precisión, generalización y simplicidad de los
+    modelos de procesos.
+
+-   Filtrado basado en el período de tiempo, el rendimiento del caso,
+    los extremos del seguimiento, las variantes del seguimiento, los
+    atributos y las rutas.
+
+-   Gestión de casos: estadísticas sobre variantes y casos.
+
+-   Gráficos: duración del caso, eventos por tiempo, distribución de los
+    valores de un atributo numérico.
+
+-   Análisis de Redes Sociales [13]: redes de traspaso de trabajo,
+    trabajo conjunto, subcontratación y actividades similares.
+
+## Aplicación 2: Enfoque basado en la minería de procesos para investigar eventos de inicio de sesión maliciosos
+
+-   Descubrimiento de procesos: Alpha(+) Miner [10] e Inductivo Miner
+    (IMDF [11]).
+
+-   Comprobación de conformidad: alineaciones y reproducción basadas en
+    tokens [12].
+
+-   Medida de la aptitud, precisión, generalización y simplicidad de los
+    modelos de procesos.
+
+-   Filtrado basado en el período de tiempo, el rendimiento del caso,
+    los extremos del seguimiento, las variantes del seguimiento, los
+    atributos y las rutas.
+
+-   Gestión de casos: estadísticas sobre variantes y casos.
+
+-   Gráficos: duración del caso, eventos por tiempo, distribución de los
+    valores de un atributo numérico.
+
+-   Análisis de Redes Sociales [13]: redes de traspaso de trabajo,
+    trabajo conjunto, subcontratación y actividades similares.
+
+# Discusión:
+
+Para maximizar la comprensión y la reutilización del código, y permitir
+la experimentación a gran escala, se adoptaron las siguientes pautas
+arquitectónicas en el desarrollo de PM4Py:
+
+-   Separación rigurosa de objetos (registros de eventos, redes de
+    Petri, DFG...), algoritmos (Alpha Miner [10], Inductivo Miner [11],
+    suavizado [12]...) y visualizaciones en diferentes paquetes. El
+    paquete pm4py.object contiene clases para importar/exportar y
+    almacenar información relacionada con objetos, así como algunas
+    herramientas para transformar objetos (por ejemplo, tratar árboles
+    como redes de Petri); mientras que el paquete pm4py.algo proporciona
+    clases de algoritmos para descubrimiento, verificación de
+    consistencia, refinamiento y evaluación. Todas las visualizaciones
+    de objetos están disponibles en el paquete pm4py.visualization.
+-   La mayor parte de la funcionalidad de PM4Py se realiza utilizando
+    métodos de fábrica. Estos métodos de fábrica proporcionan un punto
+    de entrada para cada algoritmo con un conjunto estandarizado de
+    objetos de entrada, como datos de eventos y objetos de parámetros.
+    Considere el método de fábrica Alpha Miner que se muestra en la
+    Figura 1. Alpha (variante = 'clásico') y Alpha (variante = 'plus')
+    están disponibles. Los métodos de fábrica le permiten ampliar los
+    algoritmos existentes al tiempo que garantiza la compatibilidad con
+    versiones anteriores. Los métodos de fábrica suelen aceptar el
+    nombre de la variante del algoritmo a utilizar y algunos parámetros
+    (comunes entre variantes o específicos de variantes).
+
+# Conclusión
+
+Este documento presenta la biblioteca de minería de procesos PM4Py.PM4Py
+es compatible con un conjunto de métodos de minería de procesos en
+rápido crecimiento (descubrimiento, verificación de consistencia,
+refinamiento...). Se ha publicado un video que presenta la biblioteca y
+algunos ejemplos de aplicaciones (procesamiento de registros,
+descubrimiento de procesos, verificación de cumplimiento)3. La
+biblioteca se puede instalar usando el comando pip install pm4py. La
+documentación extensa está disponible en el sitio web oficial de la
+biblioteca. Además, los repositorios de Github admiten un ecosistema
+colaborativo donde los usuarios pueden señalar problemas o contribuir
+con código.
+
+# Referencias
+
+[1] W. van der Aalst, Process Mining- Data Science in Action, Second
+Edition. Springer, 2016.
+
+[2] B. F. Van Dongen, A. K. A. de Medeiros, H. Verbeek, A. Weijters, and
+W. van der Aalst, "The prom framework: A new era in process mining tool
+support," in International conference on application and theory of petri
+nets. Springer, 2005, pp. 444--454.
+
+[3] M. La Rosa, H. A. Reijers, W. van der Aalst, R. M. Dijkman, J.
+Mendling, M. Dumas, and L. Garc´ıa-Ba˜nuelos, "Apromore: An advanced
+process model repository," Expert Systems with Applications, vol. 38,
+no. 6, pp. 7029--7040, 2011.
+
+[4] A. Bolt, M. de Leoni, and W. M. van der Aalst, "Scientific workflows
+for process mining: building blocks, scenarios, and implementation,"
+International Journal on Software Tools for Technology Transfer, vol.
+18, no. 6, pp. 607--628, 2016.
+
+[5] R. Mans, W. van der Aalst, and H. E. Verbeek, "Supporting process
+mining workflows with RapidProM." in BPM (Demos), 2014, p. 56.
+
+6] W. van der Aalst, A. Bolt, and S. J. van Zelst, "RapidProM: Mine your
+processes and not just your data," CoRR, vol. abs/1703.03740, 2017.
+[Online]. Available: <http://arxiv.org/abs/1703.03740>
+
+[7] J. Carmona Vargas and M. Sol´e, "Pmlab: a scripting environment for
+process mining," in Proceedings of the BPM Demo Sessions 2014: Colocated
+with the 12th International Conference on Business Process Management
+(BPM 2014) Eindhoven, The Netherlands, September 10, 2014. CEUR-WS. org,
+2014, pp. 16--20.
+
+[8] H. Valdivieso, W. L. J. Lee, J. Munoz-Gama, and M. Sep´ulveda,
+"Opyenxes: A complete python library for the extensible event stream
+standard."
+
+[9] G. Janssenswillen and B. Depaire, "Bupar: business process analysis
+in r," 2017.
+
+[10] W. van der Aalst, T. Weijters, and L. Maruster, "Workflow mining:
+Discovering process models from event logs," IEEE Transactions on
+Knowledge and Data Engineering, vol. 16, no. 9, pp. 1128--1142, 2004.
+
+[11] S. J. Leemans, D. Fahland, and W. van der Aalst, "Scalable process
+discovery with guarantees," in International Conference on Enterprise,
+Business-Process and Information Systems Modeling. Springer, 2015, pp.
+85--101.
+
+[12] A. Adriansyah, N. Sidorova, and B. F. van Dongen, "Cost-based
+fitness in conformance checking," in 2011 Eleventh International
+Conference on Application of Concurrency to System Design. IEEE, 2011,
+pp. 57--66.
+
+[13] W. van der Aalst and M. Song, "Mining social networks: Uncovering
+interaction patterns in business processes," in International conference
+on business process management. Springer, 2004, pp. 244--260.
+
+[14] S. J. van Zelst, A. Bolt, M. Hassani, B. F. van Dongen, and W. van
+der Aalst, "Online conformance checking: relating event streams to
+process models using prefix-alignments," International Journal of Data
+Science and Analytics, pp. 1--16, 2017.
